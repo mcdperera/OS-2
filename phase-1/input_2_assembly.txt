@@ -1,0 +1,67 @@
+
+fibonacci : the following program finds the fibonacci number of the given number.If the given number is 0 than it outputs 0 
+or the given number is 1 than it outputs 1. Otherwise, the fibonacci number of the input number is output. At the final print 
+the input number and the fibonacci number of the input number is output.
+
+FIB		LD, R5, ZERO				;reset the registry value
+		
+LOOP		ADD, R5, TEMPZERO 			;add number 1                
+		ADD, R5, TEMPONE            		;add number1 + number2
+		STR, R5, TEMP				;store the fibonacci number
+		LD, R5, TEMPONE				;load the number2 in memory
+		STR, R5, TEMPZERO			;store the number2 value in memory location number1
+		LD, R5, TEMP				;load the fibonacci number in memory
+		STR, R5, TEMPONE			;store the fibonacci number in memory location number2
+		LD,  R4, I 				;load the loop control
+		NEQ, R4,				;if i = 0;
+		JMP, 	PRINT		 		;print the fibonacci number
+		ADD, R4, DCR				;i = i - 1;
+		STR, R4, I				;store the current value of I
+		LD, R5, ZERO				;reset the registry value
+		JMP, 	LOOP				;else calculte fibonacci number
+			
+Start 		RD,R5 					;get number
+		STR, R5, NUM				;save it in memory 
+		NEQ, R5 				;if num = 0  
+		JMP, PRINTZERO				;then fib(0)=0 
+		ADD, R5, DCR            		;num = num -1
+		NEQ, R5					;if num = 0  		
+		JMP, PRINTONE				;then fib(1)= 1
+		ADD, R5, DCR            		;num = num -1
+		STR, R5, I				;save iteration count
+		JMP, FIB 				;then go to fib				
+		
+PRINTZERO	LD, R5, TEMPZERO 			;get number temp zero
+		STR, R5, TEMP				;save it in memory
+		JMP, PRINT 				;print
+			
+PRINTONE	LD, R5, TEMPONE 			;get number temp one
+		STR, R5, TEMP				;save it in memory
+
+PRINT 		LD, R5, NUM 				; get number
+		WR, R5					; out put number
+		LD, R5, TEMP 				; load fibonacci number
+		WR, R5					; out put fibonacci number
+		HLT
+			
+NUM 		DATA 	000
+TEMPZERO	DATA 	000
+TEMPONE		DATA 	001
+TEMP		DATA 	
+I		DATA 	000
+DCR		DATA 	FFF
+ZERO		DATA 	000
+
+
+02A
+328122122222
+32021E31F21D
+39EFB041319C
+29A31B432640
+212F30406114
+F3040611120F
+42730A20B402
+308208304620
+305620610000
+000001000000
+FFF00000F0

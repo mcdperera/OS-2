@@ -1,0 +1,39 @@
+Software Engineering Issues involved in design and development of Step I simulation
+
+1.Mini waterfall model was the approach taken to develop this system. Main system divides in to number of subsystems and developed that subsystem one after another. Priority was given each sub systems which one is going to execute first and which one is going to execute next.  So that makes easier to integrate those subsystems. Mini water fall model consists within requirements gather and analysis, implementation, and testing. As a result of each subsystem implement independently there were carried out subsystem testing while doing the implementation. At the final stages after integrating all together testing was happened. 
+
+Sometimes identifies the requirement is bit difficult and by reading over and over again or ask someone to clarify it makes easier to understand. 
+
+To check the error outputs of the system several no of test input files were created with use of the sample test template. 
+
+
+2. For number format conversion used online tools. Used it for three options such as
+- Decimal to hexadecimal and wise versa
+- Hexadecimal to binary and wise versa 
+- Hexadecimal to binary and wise.
+
+3. List of Utilities
+- Used Java eclipse to develop and debug
+- For the input file and test files used notepad++.
+- Code matrices tool to calculate no of blank lines.
+
+4. Bulk complexities of the simulation program
+a. Total number of code lines: 1022
+- Number of declarations: 232
+- Comment lines: 100
+- Executable Statements: 519
+- Blank lines: 164
+
+b. Number of decisions: 83
+ 
+c. Number of procedures/functions/methods: 22
+
+d. Number of classes: 1
+
+5. Time spent in design, coding and testing of simulation
+ - Design: 30-40 hours
+ - Coding: 20-30 hours
+ - Testing: 8-15 hours
+
+6. This simulation is portable with all the operating systems that installed java. The complied version is run on any java enabled machine otherwise need to compile and the compiled java code can run.
+7. I used Java for the implementation. Java is one of the languages I am comfortable and without licenses I can install and used. Moreover the deployment server supports Java makes me to choose this language. 
